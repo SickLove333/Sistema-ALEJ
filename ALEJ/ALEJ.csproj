@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD6B5E7C-B3FF-4293-A766-1A6FEC0F5648}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ALEJ</RootNamespace>
+    <AssemblyName>ALEJ</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1 Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Home.Designer.cs">
+      <DependentUpon>1 Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2 Espera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2 Espera.Designer.cs">
+      <DependentUpon>2 Espera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Docs Alt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Docs Alt.Designer.cs">
+      <DependentUpon>3 Docs Alt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_1 ContinuarR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_1 ContinuarR.Designer.cs">
+      <DependentUpon>3_1 ContinuarR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_2 NuevoR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_2 NuevoR.Designer.cs">
+      <DependentUpon>3_2 NuevoR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Archivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Archivo.Designer.cs">
+      <DependentUpon>4 Archivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5 Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5 Registro.Designer.cs">
+      <DependentUpon>5 Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="3 Docs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Docs.Designer.cs">
+      <DependentUpon>3 Docs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="1 Home.resx">
+      <DependentUpon>1 Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2 Espera.resx">
+      <DependentUpon>2 Espera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Docs Alt.resx">
+      <DependentUpon>3 Docs Alt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Docs.resx">
+      <DependentUpon>3 Docs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_1 ContinuarR.resx">
+      <DependentUpon>3_1 ContinuarR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_2 NuevoR.resx">
+      <DependentUpon>3_2 NuevoR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Archivo.resx">
+      <DependentUpon>4 Archivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5 Registro.resx">
+      <DependentUpon>5 Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
