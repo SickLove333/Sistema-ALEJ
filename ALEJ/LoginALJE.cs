@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
+using ALEJ.Clases;
 
 namespace _0_Login
 {
@@ -47,6 +48,32 @@ namespace _0_Login
         }
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            
+            // Lógica para login de empleado usando la db
+            
+            // Obtener valores de las TextBox.
+            string usuario = textBox1.Text;
+            string contraseña = textBox2.Text;
+            // string contraseña = CreateMD5(textBox2.Text); // Convertimos a MD5 para seguridad
+            
+            try
+            {
+                Conexión objConnection = new Conexión();
+                String query = $"CALL sp_get_login_empleado('{usuario}', '{contraseña}');";
+                MySqlCommand command = new MySqlCommand(query, objConnection.openConn());
+                MySqlDataReader reader = command.ExecuteReader();
+                // MessageBox.Show("Se inicia sesión correctamente");
+                if(reader.Read()){
+                    MessageBox.Show("Resultado: " + reader.GetString(0));
+                }
+                objConnection.closeConn();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Ocurrió un error: "+exception.ToString());
+            }
+            // Fin
+            
             //InterfazEmpleado interfazEmpleadoForm = new InterfazEmpleado();
 
             //interfazEmpleadoForm.Show();
@@ -68,5 +95,19 @@ namespace _0_Login
         {
             Application.Exit();
         }
+        
+        /*
+        public static string CreateMD5(string input)
+        {
+            // Use input string to calculate MD5 hash
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                return Convert.ToHexString(hashBytes); // .NET 5 +
+            }
+        }
+        */
     }
 }
