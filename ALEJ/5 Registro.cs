@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,44 +11,42 @@ using System.Windows.Forms;
 
 namespace ALEJ
 {
-    public partial class Form5 : Form
+    public partial class Registro : Form
     {
-        public Form5()
+        public Registro()
         {
             InitializeComponent();
+
         }
 
-        private void Inicio_Click(object sender, EventArgs e)
+        private void btnDoctor_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
+            btnEmpleado.Visible = false;
+            //imgboxDoctor.Visible = false;
+            imgboxEmpleado.Visible = false;
+        }
+        private void btnEmpleado_Click(object sender, EventArgs e)
+        {
+            btnDoctor.Visible = false;
+            imgboxDoctor.Visible = false;
+            //imgboxEmpleado.Visible = false;
         }
 
-        private void REspera_Click(object sender, EventArgs e)
+        private void btnEnviarEmpleado_Click(Object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Show();
-            this.Hide();
+            //Login LoginForm = new Login();
+
+            //LoginForm.Show();
+
+            //this.Hide();
         }
-
-        private void SubirReporte_Click(object sender, EventArgs e)
+        private void btnEnviarDoctor_Click(Object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.Show();
-            this.Hide();
-        }
+            //Login LoginForm = new Login();
 
-        private void Archivo_Click(object sender, EventArgs e)
-        {
-            Form4 form4 = new Form4();
-            form4.Show();
-            this.Hide();
-        }
+            //LoginForm.Show();
 
-        private void Registro_Click(object sender, EventArgs e)
-        {
-
+            //this.Hide();
         }
     }
 }
