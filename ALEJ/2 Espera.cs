@@ -1,6 +1,4 @@
-﻿using iTextSharp.text.pdf;
-using iTextSharp.text;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login_ALJE
+namespace ALEJ
 {
-    public partial class InterfazEmpleado : Form
+    public partial class Espera : Form
     {
-        public InterfazEmpleado()
+        public Espera()
         {
             InitializeComponent();
         }

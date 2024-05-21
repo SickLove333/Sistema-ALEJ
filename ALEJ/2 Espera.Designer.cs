@@ -1,9 +1,9 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Login_ALJE
+namespace ALEJ
 {
-    partial class InterfazEmpleado
+    partial class Espera
     {
         /// <summary>
         /// Required designer variable.
