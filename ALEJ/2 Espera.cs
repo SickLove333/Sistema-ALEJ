@@ -1,4 +1,6 @@
-﻿using System;
+﻿using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,48 +10,77 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ALEJ
+namespace Login_ALJE
 {
-    public partial class Form2 : Form
+    public partial class InterfazEmpleado : Form
     {
-        public Form2()
+        public InterfazEmpleado()
         {
             InitializeComponent();
         }
 
-        private void Inicio_Click(object sender, EventArgs e)
-        {
-            Form1 form1 = new Form1();
-            form1.Show();
-            this.Hide();
-        }
-
-        private void REspera_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void SubirReporte_Click(object sender, EventArgs e)
-        {
-            Form3 form3 = new Form3();
-            form3.Show();
-            this.Hide();
-        }
-
-        private void Archivo_Click(object sender, EventArgs e)
-        {
-            Form4 form4 = new Form4();
-            form4.Show();
-            this.Hide();
-        }
-
-        private void Registro_Click(object sender, EventArgs e)
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
 
-            Form5 form5 = new Form5();
-            form5.Show();
-            this.Hide();
         }
+
+        private void lblNombrePaciente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /*private void btnCrearRegistroDeEspera_Click(object sender, EventArgs e)
+        {
+
+        }*/
+        private void btnCrearRegistroDeEspera_Click(object sender, EventArgs e)
+        {
+            // Obtener valores de las TextBox.
+            string idEstudio = txtIdEstudio.Text;
+            string nombreEstudio = txtNombreEstudio.Text;
+            string precio = txtPrecio.Text;
+            string nombrePaciente = txtNombrePaciente.Text;
+            string apellidoPaciente = txtApellidoPaciente.Text;
+            string sexoPaciente = txtSexoPaciente.Text;
+            string correoPaciente = txtCorreoPaciente.Text;
+            string idEmpleado = txtIdEmpleado.Text;
+            string nombreEmpleado = txtNombreEmpleado.Text;
+            string apellidoEmpleado = txtApellidoEmpleado.Text;
+            string puestoEmpleado = txtPuestoEmpleado.Text;
+
+            // Lógica para crear el registro de espera.
+            // ...
+
+            // Mostrar mensaje de confirmación.
+            MessageBox.Show("Registro generado exitosamente.");
+
+            // Limpiar las TextBox del formulario.
+            LimpiarFormulario();
+        }
+
+        private void LimpiarFormulario()
+        {
+            // Lista de todas las TextBox a limpiar.
+            TextBox[] textBoxes = {
+        txtIdEstudio, txtNombreEstudio, txtPrecio,
+        txtNombrePaciente, txtApellidoPaciente, txtSexoPaciente,
+        txtCorreoPaciente, txtIdEmpleado, txtNombreEmpleado,
+        txtApellidoEmpleado, txtPuestoEmpleado
+    };
+
+            // Limpiar cada TextBox.
+            foreach (TextBox textBox in textBoxes)
+            {
+                textBox.Clear();
+            }
+        }
+
     }
 }
+
 
