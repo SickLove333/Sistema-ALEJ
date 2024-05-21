@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace _0_Login
 {
-    public partial class Login : Form
+    public partial class LoginALJE : Form
     {
-        public Login()
+        public LoginALJE()
         {
             InitializeComponent();
         }
@@ -62,6 +62,11 @@ namespace _0_Login
         private void label5_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void closebtn_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

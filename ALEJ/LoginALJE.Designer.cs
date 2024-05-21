@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace _0_Login
 {
-    partial class Login
+    partial class LoginALJE
     {
         /// <summary>
         ///  Required designer variable.
@@ -39,7 +39,7 @@ namespace _0_Login
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginALJE));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@ namespace _0_Login
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -54,12 +55,11 @@ namespace _0_Login
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.closebtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -156,6 +156,16 @@ namespace _0_Login
             this.btnIniciarSesion.Text = "Iniciar sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(98, 54);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(269, 153);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
@@ -228,6 +238,7 @@ namespace _0_Login
             this.closebtn.TabIndex = 4;
             this.closebtn.Text = "X";
             this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click_1);
             // 
             // label3
             // 
@@ -240,38 +251,27 @@ namespace _0_Login
             this.label3.TabIndex = 3;
             this.label3.Text = "Inicie sesión para continuar";
             // 
-            // pictureBox1
+            // LoginALJE
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(98, 54);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(269, 153);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Login
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(750, 530);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Login";
+            this.Name = "LoginALJE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

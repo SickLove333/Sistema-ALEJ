@@ -103,11 +103,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="0 Login.cs">
+    <Compile Include="LoginALJE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="0 Login.Designer.cs">
-      <DependentUpon>0 Login.cs</DependentUpon>
+    <Compile Include="LoginALJE.Designer.cs">
+      <DependentUpon>LoginALJE.cs</DependentUpon>
     </Compile>
     <Compile Include="1 Home.cs">
       <SubType>Form</SubType>
@@ -160,8 +160,8 @@
     <Compile Include="3 Docs.Designer.cs">
       <DependentUpon>3 Docs.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="0 Login.resx">
-      <DependentUpon>0 Login.cs</DependentUpon>
+    <EmbeddedResource Include="LoginALJE.resx">
+      <DependentUpon>LoginALJE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="1 Home.resx">
       <DependentUpon>1 Home.cs</DependentUpon>
