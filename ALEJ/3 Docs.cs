@@ -36,8 +36,8 @@ namespace ALEJ
 
         private void REspera_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Show();
+            Espera Espera = new Espera();
+            Espera.Show();
             this.Hide();
         }
 
@@ -55,8 +55,8 @@ namespace ALEJ
 
         private void Registro_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
-            form5.Show();
+            Registro Registro = new Registro();
+            Registro.Show();
             this.Hide();
         }
 
