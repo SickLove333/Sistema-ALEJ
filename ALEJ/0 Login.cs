@@ -8,16 +8,58 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ALEJ
+
+namespace _0_Login
 {
-    public partial class _0_Login : Form
+    public partial class Login : Form
     {
-        public _0_Login()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario "Registro"
+            //Registro registroForm = new Registro();
+
+            // Mostrar el formulario "Registro"
+            //registroForm.Show();
+
+            // Ocultar la interfaz actual 
+            //this.Hide();
+        }
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            //InterfazEmpleado interfazEmpleadoForm = new InterfazEmpleado();
+
+            //interfazEmpleadoForm.Show();
+
+            //this.Hide();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
         {
 
         }
