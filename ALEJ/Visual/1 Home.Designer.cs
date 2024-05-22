@@ -1,6 +1,6 @@
 ﻿namespace ALEJ
 {
-    partial class Form3
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.NavBar = new System.Windows.Forms.Panel();
             this.Registro = new System.Windows.Forms.Button();
             this.Archivo = new System.Windows.Forms.Button();
@@ -37,14 +37,9 @@
             this.Inicio = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Fondo = new System.Windows.Forms.Panel();
-            this.NuevoR = new System.Windows.Forms.Button();
-            this.ContinuarR = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.NavBar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.Fondo.SuspendLayout();
             this.SuspendLayout();
             // 
             // NavBar
@@ -59,7 +54,7 @@
             this.NavBar.Location = new System.Drawing.Point(0, 0);
             this.NavBar.Name = "NavBar";
             this.NavBar.Size = new System.Drawing.Size(320, 1028);
-            this.NavBar.TabIndex = 0;
+            this.NavBar.TabIndex = 1;
             // 
             // Registro
             // 
@@ -83,22 +78,21 @@
             this.Archivo.Name = "Archivo";
             this.Archivo.Size = new System.Drawing.Size(320, 72);
             this.Archivo.TabIndex = 4;
-            this.Archivo.Text = "ARCHIVO";
+            this.Archivo.Text = "HISTORIAL";
             this.Archivo.UseVisualStyleBackColor = true;
             this.Archivo.Click += new System.EventHandler(this.Archivo_Click);
             // 
             // SubirReporte
             // 
-            this.SubirReporte.BackColor = System.Drawing.Color.White;
             this.SubirReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubirReporte.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubirReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(204)))));
+            this.SubirReporte.ForeColor = System.Drawing.Color.White;
             this.SubirReporte.Location = new System.Drawing.Point(0, 432);
             this.SubirReporte.Name = "SubirReporte";
             this.SubirReporte.Size = new System.Drawing.Size(320, 72);
             this.SubirReporte.TabIndex = 3;
-            this.SubirReporte.Text = "SUBIR REPORTE";
-            this.SubirReporte.UseVisualStyleBackColor = false;
+            this.SubirReporte.Text = "ARCHIVO";
+            this.SubirReporte.UseVisualStyleBackColor = true;
             this.SubirReporte.Click += new System.EventHandler(this.SubirReporte_Click);
             // 
             // REspera
@@ -116,15 +110,16 @@
             // 
             // Inicio
             // 
+            this.Inicio.BackColor = System.Drawing.Color.White;
             this.Inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Inicio.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Inicio.ForeColor = System.Drawing.Color.White;
+            this.Inicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(204)))));
             this.Inicio.Location = new System.Drawing.Point(0, 288);
             this.Inicio.Name = "Inicio";
             this.Inicio.Size = new System.Drawing.Size(320, 72);
             this.Inicio.TabIndex = 1;
             this.Inicio.Text = "INICIO";
-            this.Inicio.UseVisualStyleBackColor = true;
+            this.Inicio.UseVisualStyleBackColor = false;
             this.Inicio.Click += new System.EventHandler(this.Inicio_Click);
             // 
             // panelLogo
@@ -146,77 +141,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Fondo
-            // 
-            this.Fondo.BackColor = System.Drawing.Color.White;
-            this.Fondo.Controls.Add(this.NuevoR);
-            this.Fondo.Controls.Add(this.ContinuarR);
-            this.Fondo.Controls.Add(this.label1);
-            this.Fondo.Location = new System.Drawing.Point(321, 0);
-            this.Fondo.Name = "Fondo";
-            this.Fondo.Size = new System.Drawing.Size(1576, 1028);
-            this.Fondo.TabIndex = 1;
-            this.Fondo.Paint += new System.Windows.Forms.PaintEventHandler(this.Fondo_Paint);
-            // 
-            // NuevoR
-            // 
-            this.NuevoR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(204)))));
-            this.NuevoR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NuevoR.Font = new System.Drawing.Font("Montserrat", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoR.ForeColor = System.Drawing.Color.White;
-            this.NuevoR.Location = new System.Drawing.Point(823, 265);
-            this.NuevoR.Name = "NuevoR";
-            this.NuevoR.Size = new System.Drawing.Size(728, 504);
-            this.NuevoR.TabIndex = 2;
-            this.NuevoR.Text = "NUEVO REPORTE DE RESULTADOS";
-            this.NuevoR.UseVisualStyleBackColor = false;
-            this.NuevoR.Click += new System.EventHandler(this.NuevoR_Click);
-            // 
-            // ContinuarR
-            // 
-            this.ContinuarR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(204)))));
-            this.ContinuarR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ContinuarR.Font = new System.Drawing.Font("Montserrat", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContinuarR.ForeColor = System.Drawing.Color.White;
-            this.ContinuarR.Location = new System.Drawing.Point(19, 265);
-            this.ContinuarR.Name = "ContinuarR";
-            this.ContinuarR.Size = new System.Drawing.Size(728, 504);
-            this.ContinuarR.TabIndex = 1;
-            this.ContinuarR.Text = "CONTINUAR REPORTE DE RESULTADOS";
-            this.ContinuarR.UseVisualStyleBackColor = false;
-            this.ContinuarR.Click += new System.EventHandler(this.ContinuarR_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(116)))), ((int)(((byte)(204)))));
-            this.label1.Location = new System.Drawing.Point(0, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1579, 175);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "SUBIR DOCUMENTO";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Form3
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
-            this.Controls.Add(this.Fondo);
             this.Controls.Add(this.NavBar);
-            this.Name = "Form3";
+            this.Name = "Form1";
             this.ShowIcon = false;
-            this.Text = "ALEJ - SUBIR DOCUMENTOS";
+            this.Text = "ALEJ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.SUBIR_DOCUMENTOS_Load);
+            this.Load += new System.EventHandler(this._1_Home_Load);
             this.NavBar.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.Fondo.ResumeLayout(false);
-            this.Fondo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -224,16 +162,12 @@
         #endregion
 
         private System.Windows.Forms.Panel NavBar;
-        private System.Windows.Forms.Panel Fondo;
-        private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button Inicio;
         private System.Windows.Forms.Button Registro;
         private System.Windows.Forms.Button Archivo;
         private System.Windows.Forms.Button SubirReporte;
         private System.Windows.Forms.Button REspera;
+        private System.Windows.Forms.Button Inicio;
+        private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button NuevoR;
-        private System.Windows.Forms.Button ContinuarR;
     }
 }

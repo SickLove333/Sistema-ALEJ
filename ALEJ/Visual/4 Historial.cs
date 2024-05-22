@@ -21,5 +21,10 @@ namespace ALEJ
         {
 
         }
+
+        private void Archivo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

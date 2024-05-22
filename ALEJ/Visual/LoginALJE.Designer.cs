@@ -81,7 +81,7 @@ namespace _0_Login
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(59, 263);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 38);
+            this.label2.Size = new System.Drawing.Size(207, 44);
             this.label2.TabIndex = 2;
             this.label2.Text = "Sistema ALJE";
             // 
@@ -92,7 +92,7 @@ namespace _0_Login
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(59, 228);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 38);
+            this.label1.Size = new System.Drawing.Size(215, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenido a ";
             // 
@@ -106,7 +106,7 @@ namespace _0_Login
             this.label5.Location = new System.Drawing.Point(25, 14);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 24);
+            this.label5.Size = new System.Drawing.Size(86, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "Usuario";
             this.label5.Click += new System.EventHandler(this.label5_Click_1);
@@ -165,6 +165,7 @@ namespace _0_Login
             this.pictureBox1.Size = new System.Drawing.Size(269, 153);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel4
             // 
@@ -186,7 +187,7 @@ namespace _0_Login
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(6, 12);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 24);
+            this.label6.Size = new System.Drawing.Size(122, 29);
             this.label6.TabIndex = 8;
             this.label6.Text = "Contraseña";
             // 
@@ -197,7 +198,7 @@ namespace _0_Login
             this.textBox2.Location = new System.Drawing.Point(111, 12);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(317, 25);
+            this.textBox2.Size = new System.Drawing.Size(317, 30);
             this.textBox2.TabIndex = 8;
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -220,7 +221,7 @@ namespace _0_Login
             this.textBox1.Location = new System.Drawing.Point(111, 12);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 25);
+            this.textBox1.Size = new System.Drawing.Size(317, 30);
             this.textBox1.TabIndex = 7;
             // 
             // closebtn
@@ -234,7 +235,7 @@ namespace _0_Login
             this.closebtn.Location = new System.Drawing.Point(410, 0);
             this.closebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(40, 32);
+            this.closebtn.Size = new System.Drawing.Size(40, 47);
             this.closebtn.TabIndex = 4;
             this.closebtn.Text = "X";
             this.closebtn.UseVisualStyleBackColor = false;
@@ -247,7 +248,7 @@ namespace _0_Login
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(106, 228);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(248, 26);
+            this.label3.Size = new System.Drawing.Size(305, 32);
             this.label3.TabIndex = 3;
             this.label3.Text = "Inicie sesión para continuar";
             // 
@@ -261,6 +262,7 @@ namespace _0_Login
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginALJE";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
