@@ -386,6 +386,7 @@ namespace ALEJ
             this.btnCrearRegistroDeEspera.TabIndex = 0;
             this.btnCrearRegistroDeEspera.Text = "Crear";
             this.btnCrearRegistroDeEspera.UseVisualStyleBackColor = false;
+            this.btnCrearRegistroDeEspera.Click += btnCrearRegistroDeEspera_Click;
             // 
             // btnVolverAlMenu
             // 
