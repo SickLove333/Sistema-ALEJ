@@ -33,7 +33,7 @@ namespace ALEJ
         {
 
         }
-        
+
         private void btnCrearRegistroDeEspera_Click(object sender, EventArgs e)
         {
             // Obtener valores de las TextBox.
@@ -52,7 +52,7 @@ namespace ALEJ
             // string puestoEmpleado = txtPuestoEmpleado.Text;
 
             // Lógica para crear el registro de espera.
-            
+
             try
             {
                 Conexión objConnection = new Conexión();
@@ -71,7 +71,7 @@ namespace ALEJ
                     // Cerrar la conexión de lectura.
                     reader.Close();
                     objConnection.closeConn();
-                    
+
                     // Mostrar mensaje de confirmación.
                     MessageBox.Show("Registro generado exitosamente.");
 
@@ -83,13 +83,13 @@ namespace ALEJ
                     // Cerrar la conexión de lectura.
                     reader.Close();
                     objConnection.closeConn();
-                    
+
                     MessageBox.Show("Ocurrió un error");
                 }
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Ocurrió un error: "+exception.ToString());
+                MessageBox.Show("Ocurrió un error: " + exception.ToString());
             }
         }
 
@@ -109,7 +109,17 @@ namespace ALEJ
                 textBox.Clear();
             }
         }
+        private void btnVolverAlMenu_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario "Registro".
+            Form1 HomeForm = new Form1();
 
+            // Mostrar el formulario "Registro".
+            HomeForm.Show();
+
+            // Ocultar el formulario actual.
+            this.Hide();
+        }
     }
 }
 

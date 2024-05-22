@@ -59,6 +59,7 @@ namespace ALEJ
             this.txtIdEstudio = new System.Windows.Forms.TextBox();
             this.lblIdEstudio = new System.Windows.Forms.Label();
             this.btnCrearRegistroDeEspera = new System.Windows.Forms.Button();
+            this.btnVolverAlMenu = new System.Windows.Forms.Button();
             this.Historial_de_paciente = new System.Windows.Forms.TabPage();
             this.Pestañas.SuspendLayout();
             this.Registro_de_espera.SuspendLayout();
@@ -386,6 +387,18 @@ namespace ALEJ
             this.btnCrearRegistroDeEspera.Text = "Crear";
             this.btnCrearRegistroDeEspera.UseVisualStyleBackColor = false;
             // 
+            // btnVolverAlMenu
+            // 
+            this.btnVolverAlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVolverAlMenu.BackColor = System.Drawing.Color.LightGray;
+            this.btnVolverAlMenu.Location = new System.Drawing.Point(400, 2);
+            this.btnVolverAlMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolverAlMenu.Name = "btnVolverAlMenu";
+            this.btnVolverAlMenu.Size = new System.Drawing.Size(104, 31);
+            this.btnVolverAlMenu.TabIndex = 0;
+            this.btnVolverAlMenu.Text = "Volver";
+            this.btnVolverAlMenu.UseVisualStyleBackColor = false;
+            // 
             // Historial_de_paciente
             // 
             this.Historial_de_paciente.BackColor = System.Drawing.Color.Gainsboro;
@@ -480,5 +493,6 @@ namespace ALEJ
         private Label lblApellidoEmpleado;
         private Label lblPuestoEmpleado;
         private TextBox txtPuestoEmpleado;
+        private Button btnVolverAlMenu;
     }
 }
