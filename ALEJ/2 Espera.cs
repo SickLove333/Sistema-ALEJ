@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using ALEJ.Clases;
 
 namespace ALEJ
 {
@@ -39,19 +41,57 @@ namespace ALEJ
         private void btnCrearRegistroDeEspera_Click(object sender, EventArgs e)
         {
             // Obtener valores de las TextBox.
-            string idEstudio = txtIdEstudio.Text;
-            string nombreEstudio = txtNombreEstudio.Text;
+            int idEstudio = Int32.Parse(txtIdEstudio.Text);
+            // string nombreEstudio = txtNombreEstudio.Text;
             string precio = txtPrecio.Text;
             string nombrePaciente = txtNombrePaciente.Text;
             string apellidoPaciente = txtApellidoPaciente.Text;
-            string sexoPaciente = txtSexoPaciente.Text;
+            // string apellidoMaternoPaciente = txtApellidoMaternoPaciente.Text;
+            // string sexoPaciente = txtSexoPaciente.Text;
+            int idSexoPaciente = Int32.Parse(txtSexoPaciente.Text);
             string correoPaciente = txtCorreoPaciente.Text;
             string idEmpleado = txtIdEmpleado.Text;
-            string nombreEmpleado = txtNombreEmpleado.Text;
-            string apellidoEmpleado = txtApellidoEmpleado.Text;
-            string puestoEmpleado = txtPuestoEmpleado.Text;
+            // string nombreEmpleado = txtNombreEmpleado.Text;
+            // string apellidoEmpleado = txtApellidoEmpleado.Text;
+            // string puestoEmpleado = txtPuestoEmpleado.Text;
 
             // Lógica para crear el registro de espera.
+            
+            try
+            {
+                Conexión objConnection = new Conexión();
+                String query = $"CALL sp_put_registro_espera(" +
+                               $"'{nombrePaciente}'," +
+                               $"'{apellidoPaciente}'," +
+                               $"'{idSexoPaciente}'," +
+                               $"'{correoPaciente}'," +
+                               $"'{idEmpleado}'," +
+                               $"'{idEstudio}'," +
+                               $");";
+                MySqlCommand command = new MySqlCommand(query, objConnection.openConn());
+                MySqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    // Cerrar la conexión de lectura.
+                    reader.Close();
+                    objConnection.closeConn();
+                    
+                    MessageBox.Show("Se guardó el registro de espera");
+                }
+                else
+                {
+                    // Cerrar la conexión de lectura.
+                    reader.Close();
+                    objConnection.closeConn();
+                    
+                    MessageBox.Show("Ocurrió un error");
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Ocurrió un error: "+exception.ToString());
+            }
+            
             // ...
 
             // Mostrar mensaje de confirmación.
