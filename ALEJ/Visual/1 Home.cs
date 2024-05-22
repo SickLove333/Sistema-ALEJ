@@ -45,9 +45,9 @@ namespace ALEJ
 
         private void Registro_Click(object sender, EventArgs e)
         {
-            Registro Registro = new Registro();
+            /*Registro Registro = new Registro();
             Registro.Show();
-            this.Hide();
+            this.Hide();*/
         }
 
         private void Inicio_Click(object sender, EventArgs e)

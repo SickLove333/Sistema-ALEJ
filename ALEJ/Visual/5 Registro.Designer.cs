@@ -133,6 +133,7 @@ namespace ALEJ
             this.btnDoctor.TabIndex = 0;
             this.btnDoctor.Text = "Doctor";
             this.btnDoctor.UseVisualStyleBackColor = false;
+            this.btnDoctor.Click += new System.EventHandler(this.btnDoctor_Click);
             // 
             // btnEnviarEmpleado
             // 
@@ -147,6 +148,7 @@ namespace ALEJ
             this.btnEnviarEmpleado.TabIndex = 21;
             this.btnEnviarEmpleado.Text = "Enviar";
             this.btnEnviarEmpleado.UseVisualStyleBackColor = false;
+            this.btnEnviarEmpleado.Click += btnEnviarEmpleado_Click;
             // 
             // txtPuestoEmpleado
             // 
@@ -346,6 +348,7 @@ namespace ALEJ
             this.btnEmpleado.TabIndex = 0;
             this.btnEmpleado.Text = "Empleado";
             this.btnEmpleado.UseVisualStyleBackColor = false;
+            this.btnEmpleado.Click += new System.EventHandler(this.btnEmpleado_Click);
             // 
             // btnEnviarDoctor
             // 
@@ -360,6 +363,7 @@ namespace ALEJ
             this.btnEnviarDoctor.TabIndex = 22;
             this.btnEnviarDoctor.Text = "Enviar";
             this.btnEnviarDoctor.UseVisualStyleBackColor = false;
+            this.btnEnviarDoctor.Click += btnEnviarDoctor_Click;
             // 
             // txtCedulaDoctor
             // 
@@ -544,8 +548,7 @@ namespace ALEJ
             // 
             // Registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(750, 530);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

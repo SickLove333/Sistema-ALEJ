@@ -141,6 +141,7 @@ namespace _0_Login
             this.btnRegistrarse.TabIndex = 8;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = false;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // btnIniciarSesion
             // 
@@ -155,6 +156,7 @@ namespace _0_Login
             this.btnIniciarSesion.TabIndex = 7;
             this.btnIniciarSesion.Text = "Iniciar sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += btnIniciarSesion_Click;
             // 
             // pictureBox1
             // 
