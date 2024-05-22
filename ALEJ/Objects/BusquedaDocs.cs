@@ -79,7 +79,9 @@ namespace ALEJ
 
         internal List<Doc> consultarDocs(string filtro)
         {
+            
             throw new NotImplementedException();
+            
         }
     }
 }
