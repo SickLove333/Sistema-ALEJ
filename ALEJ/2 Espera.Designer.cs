@@ -1,5 +1,8 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using ALEJ.Clases;
 
 namespace ALEJ
 {
@@ -393,6 +396,44 @@ namespace ALEJ
             this.Historial_de_paciente.Size = new System.Drawing.Size(792, 366);
             this.Historial_de_paciente.TabIndex = 1;
             this.Historial_de_paciente.Text = "Historiales";
+            
+            // Crear un ListBox y llenarlo con los elementos
+            ListBox listBox = new ListBox
+            {
+                Dock = DockStyle.Fill
+            };
+            
+            // Lógica para obtener la info de la db
+            
+            try
+            {
+                Conexión objConnection = new Conexión();
+                String query = "CALL sp_get_historial_registro_espera();";
+                MySqlCommand command = new MySqlCommand(query, objConnection.openConn());
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    // listBox.Items.AddRange(new string[] { "Item A", "Item B", "Item C" });
+                    String nombrePaciente = reader.GetString(12);
+                    String apellidoPaciente = reader.GetString(13);
+                    String correoPaciente = reader.GetString(17);
+                    String estudio = reader.GetString(18);
+                    decimal precio = reader.GetDecimal(19);
+                    listBox.Items.Add($"{nombrePaciente}, {apellidoPaciente}, {correoPaciente}, {estudio}, {precio}");
+                }
+                
+                // Cerrar la conexión de lectura.
+                reader.Close();
+                objConnection.closeConn();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Ocurrió un error: "+exception.ToString());
+            }
+
+            // listBox.Items.AddRange(new string[] { "Item A", "Item B", "Item C" });
+            Historial_de_paciente.Controls.Add(listBox);
+
             // 
             // Espera
             // 
