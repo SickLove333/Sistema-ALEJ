@@ -60,14 +60,14 @@ namespace ALEJ
             try
             {
                 Conexión objConnection = new Conexión();
-                String query = $"CALL sp_put_registro_espera(" +
+                String query = "CALL sp_put_registro_de_espera(" +
                                $"'{nombrePaciente}'," +
                                $"'{apellidoPaciente}'," +
                                $"'{idSexoPaciente}'," +
                                $"'{correoPaciente}'," +
                                $"'{idEmpleado}'," +
-                               $"'{idEstudio}'," +
-                               $");";
+                               $"'{idEstudio}'" +
+                               ");";
                 MySqlCommand command = new MySqlCommand(query, objConnection.openConn());
                 MySqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
@@ -76,7 +76,11 @@ namespace ALEJ
                     reader.Close();
                     objConnection.closeConn();
                     
-                    MessageBox.Show("Se guardó el registro de espera");
+                    // Mostrar mensaje de confirmación.
+                    MessageBox.Show("Registro generado exitosamente.");
+
+                    // Limpiar las TextBox del formulario.
+                    LimpiarFormulario();
                 }
                 else
                 {
@@ -91,14 +95,6 @@ namespace ALEJ
             {
                 MessageBox.Show("Ocurrió un error: "+exception.ToString());
             }
-            
-            // ...
-
-            // Mostrar mensaje de confirmación.
-            MessageBox.Show("Registro generado exitosamente.");
-
-            // Limpiar las TextBox del formulario.
-            LimpiarFormulario();
         }
 
         private void LimpiarFormulario()
