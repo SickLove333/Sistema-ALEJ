@@ -13,7 +13,7 @@ namespace ALEJ
     public partial class Form3 : Form
     {
 
-        private List<Doc> mDocs;
+        // private List<Doc> mDocs;
 
         public Form3()
         {

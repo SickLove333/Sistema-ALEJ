@@ -64,7 +64,13 @@ namespace _0_Login
                 MySqlDataReader reader = command.ExecuteReader();
                 // MessageBox.Show("Se inicia sesión correctamente");
                 if(reader.Read()){
-                    MessageBox.Show("Resultado: " + reader.GetString(0));
+                    // MessageBox.Show("Resultado: " + reader.GetString(0));
+            
+                    //InterfazEmpleado interfazEmpleadoForm = new InterfazEmpleado();
+
+                    //interfazEmpleadoForm.Show();
+
+                    this.Hide();
                 }
                 objConnection.closeConn();
             }
@@ -73,12 +79,6 @@ namespace _0_Login
                 MessageBox.Show("Ocurrió un error: "+exception.ToString());
             }
             // Fin
-            
-            //InterfazEmpleado interfazEmpleadoForm = new InterfazEmpleado();
-
-            //interfazEmpleadoForm.Show();
-
-            //this.Hide();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
