@@ -33,11 +33,7 @@ namespace ALEJ
         {
 
         }
-
-        /*private void btnCrearRegistroDeEspera_Click(object sender, EventArgs e)
-        {
-
-        }*/
+        
         private void btnCrearRegistroDeEspera_Click(object sender, EventArgs e)
         {
             // Obtener valores de las TextBox.

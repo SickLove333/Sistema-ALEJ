@@ -148,6 +148,7 @@ namespace ALEJ
             this.btnEnviarEmpleado.TabIndex = 21;
             this.btnEnviarEmpleado.Text = "Enviar";
             this.btnEnviarEmpleado.UseVisualStyleBackColor = false;
+            this.btnEnviarEmpleado.Click += btnEnviarEmpleado_Click;
             // 
             // txtPuestoEmpleado
             // 
@@ -362,6 +363,7 @@ namespace ALEJ
             this.btnEnviarDoctor.TabIndex = 22;
             this.btnEnviarDoctor.Text = "Enviar";
             this.btnEnviarDoctor.UseVisualStyleBackColor = false;
+            this.btnEnviarDoctor.Click += btnEnviarDoctor_Click;
             // 
             // txtCedulaDoctor
             // 
