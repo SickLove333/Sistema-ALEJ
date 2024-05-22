@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using ALEJ.Clases;
+using _0_Login;
 
 namespace ALEJ
 {
@@ -66,8 +67,8 @@ namespace ALEJ
                     // Mostrar mensaje de confirmación.
                     MessageBox.Show("Registro generado exitosamente.");
                     
-                    // Login LoginForm = new Login();
-                    // LoginForm.Show();
+                    LoginALJE LoginForm = new LoginALJE();
+                    LoginForm.Show();
                     this.Hide();
                 }
                 else
@@ -118,8 +119,8 @@ namespace ALEJ
                     // Mostrar mensaje de confirmación.
                     MessageBox.Show("Registro generado exitosamente.");
                     
-                    // Login LoginForm = new Login();
-                    // LoginForm.Show();
+                    LoginALJE LoginForm = new LoginALJE();
+                    LoginForm.Show();
                     this.Hide();
                 }
                 else
