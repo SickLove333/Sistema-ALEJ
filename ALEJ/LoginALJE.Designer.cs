@@ -155,8 +155,7 @@ namespace _0_Login
             this.btnIniciarSesion.TabIndex = 7;
             this.btnIniciarSesion.Text = "Iniciar sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
-            // this.btnIniciarSesion.Click += btnIniciarSesion_Click;
-            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click());
+            this.btnIniciarSesion.Click += btnIniciarSesion_Click;
             // 
             // pictureBox1
             // 
