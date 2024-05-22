@@ -39,13 +39,13 @@ namespace _0_Login
         private void btnRegistrarse_Click(object sender, EventArgs e)
         {
             // Crear una instancia del formulario "Registro"
-            //Registro registroForm = new Registro();
+            Registro registroForm = new Registro();
 
             // Mostrar el formulario "Registro"
-            //registroForm.Show();
+            registroForm.Show();
 
             // Ocultar la interfaz actual 
-            //this.Hide();
+            this.Hide();
         }
         /*private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
@@ -139,7 +139,9 @@ namespace _0_Login
         {
             Application.Exit();
         }
+
         
+
         /*
         public static string CreateMD5(string input)
         {
