@@ -48,5 +48,10 @@ namespace ALEJ
 
             //this.Hide();
         }
+
+        private void btnEmpleado_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

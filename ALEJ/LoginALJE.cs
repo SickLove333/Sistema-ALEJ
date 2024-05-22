@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using ALEJ.Clases;
+using ALEJ;
 
 namespace _0_Login
 {
@@ -46,7 +47,7 @@ namespace _0_Login
             // Ocultar la interfaz actual 
             //this.Hide();
         }
-        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        /*private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             
             // Lógica para login de empleado usando la db
@@ -79,7 +80,50 @@ namespace _0_Login
                 MessageBox.Show("Ocurrió un error: "+exception.ToString());
             }
             // Fin
+        }*/
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            // Obtener valores de las TextBox.
+            string usuario = textBox1.Text;
+            string contraseña = textBox2.Text;
+
+            try
+            {
+                Conexión objConnection = new Conexión();
+                String query = $"CALL sp_get_login_empleado('{usuario}', '{contraseña}');";
+                MySqlCommand command = new MySqlCommand(query, objConnection.openConn());
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // Cerrar la conexión de lectura.
+                    reader.Close();
+                    objConnection.closeConn();
+
+                    // Crear una instancia del formulario "Registro".
+                    Form1 HomeForm = new Form1();
+
+                    // Mostrar el formulario "Registro".
+                    HomeForm.Show();
+
+                    // Ocultar el formulario actual.
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.");
+                    // Cerrar la conexión de lectura.
+                    reader.Close();
+                    objConnection.closeConn();
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Ocurrió un error: " + exception.ToString());
+            }
         }
+
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {

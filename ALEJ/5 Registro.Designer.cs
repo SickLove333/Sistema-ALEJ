@@ -346,6 +346,7 @@ namespace ALEJ
             this.btnEmpleado.TabIndex = 0;
             this.btnEmpleado.Text = "Empleado";
             this.btnEmpleado.UseVisualStyleBackColor = false;
+            this.btnEmpleado.Click += new System.EventHandler(this.btnEmpleado_Click_1);
             // 
             // btnEnviarDoctor
             // 
